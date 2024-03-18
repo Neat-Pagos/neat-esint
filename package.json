@@ -2,7 +2,7 @@
   "name": "neat-eslint",
   "version": "0.0.1",
   "description": "Neat Group of rules to lint our typescript projects",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts"
