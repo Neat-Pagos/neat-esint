@@ -1,0 +1,54 @@
+import { Linter } from 'eslint';
+
+import { configs } from '@typescript-eslint/eslint-plugin';
+
+const typescriptESLintConfig: Linter.Config = configs.recommended;
+
+export = {
+  configs: {
+    'typescript-eslint': {
+      ...typescriptESLintConfig,
+      rules: {
+        ...typescriptESLintConfig.rules,
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        'max-len': [
+          'error',
+          {
+            'code': 140,
+            'tabWidth': 2,
+            'comments': 140,
+            'ignoreUrls': true
+          }
+        ],
+        'indent': [2, 2],
+        'semi': [2, 'always'],
+        'no-console': 0,
+        'space-before-blocks': 2,
+        'prefer-template': 'error',
+        'quotes': [
+          2,
+          'single',
+          {
+            'allowTemplateLiterals': true
+          }
+        ],
+        'space-infix-ops': 2,
+        'comma-spacing': ['error', { 'before': false, 'after': true}],
+        'no-trailing-spaces': 'error',
+        'no-irregular-whitespace': [
+          'error',
+          {
+            'skipStrings': true,
+            'skipComments': true,
+            'skipRegExps': true,
+            'skipTemplates': true
+          }
+        ],
+        'curly': ['error', 'all'],
+        'no-var': 'error',
+        'one-var': ['error', 'never']
+      }
+    }
+  }
+};
