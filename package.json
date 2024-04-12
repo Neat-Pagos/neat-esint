@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neat-eslint",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Neat Group of rules to lint our typescript projects",
   "main": "lib/index.js",
   "scripts": {

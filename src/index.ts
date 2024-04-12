@@ -43,6 +43,8 @@ export = {
     ],
     'curly': ['error', 'all'],
     'no-var': 'error',
-    'one-var': ['error', 'never']
+    'one-var': ['error', 'never'],
+    'max-lines': ['error', 300],
+    'max-statements': ['error', 30],
   }
 };
