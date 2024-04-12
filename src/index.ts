@@ -3,7 +3,9 @@ export = {
   'extends': [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript'
   ],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
@@ -43,6 +45,37 @@ export = {
     ],
     'curly': ['error', 'all'],
     'no-var': 'error',
-    'one-var': ['error', 'never']
-  }
+    'one-var': ['error', 'never'],
+    'import/newline-after-import': 'error',
+    'no-multiple-empty-lines': 'error',
+    'object-curly-spacing': ['error', 'always'],
+    'import/no-unresolved': 'error',
+    'import/order': [
+      'error',
+      {
+        'groups': [
+          'builtin',
+          'external',
+          'internal',
+          ['sibling', 'parent'],
+          'index',
+          'unknown',
+        ],
+        'newlines-between': 'always',
+        'alphabetize': {
+          /* sort in ascending order. Options: ["ignore", "asc", "desc"] */
+          'order': 'asc',
+          /* ignore case. Options: [true, false] */
+          'caseInsensitive': true,
+        },
+      },
+    ]
+  },
+  'settings': {
+    'import/resolver': {
+      'typescript': {
+        'project': './tsconfig.json',
+      },
+    },
+  },
 };
