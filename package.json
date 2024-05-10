@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neat-eslint",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Neat Group of rules to lint our typescript projects",
   "main": "lib/index.js",
   "scripts": {
@@ -11,15 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.3.0",
+    "eslint": "^8.57.0",
     "@types/eslint": "^8.56.5",
     "@typescript-eslint/eslint-plugin": "^7.3.0",
-    "@typescript-eslint/parser": "^7.3.0",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^7.3.0"
+  },
+  "dependencies": {
     "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
-    "typescript-eslint": "^7.3.0"
+    "eslint-plugin-import": "^2.29.1"
   }
 }
